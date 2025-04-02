@@ -4,10 +4,11 @@ import Product from "./pages/Product";
 import Homepage from "./pages/Homepage";
 import PricingPage from "./pages/PricingPage";
 import PageNotFound from "./pages/PageNotFound";
+import AppLayout from "./pages/AppLayout";
 
 export default function App() {
   return (
-    
+
     <div>
       
     <BrowserRouter>
@@ -15,6 +16,7 @@ export default function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="product" element={<Product />} />
         <Route path="pricing" element={<PricingPage />} />
+        <Route path="app" element={<AppLayout/>} />
         <Route path='*' element={<PageNotFound/>}/>
       </Routes>
     </BrowserRouter>
