@@ -7,6 +7,7 @@ import PageNotFound from "./pages/PageNotFound";
 
 export default function App() {
   return (
+    
     <div>
       
     <BrowserRouter>
@@ -19,7 +20,7 @@ export default function App() {
     </BrowserRouter>
 
 
-    
+
     </div>
   );
 }

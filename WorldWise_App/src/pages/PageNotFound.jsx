@@ -1,7 +1,8 @@
 import React from 'react'
+import PageNav from '../assets/components/PageNav'
 
 export default function PageNotFound() {
   return (
-    <div>Page Not Found</div>
+    <div><PageNav/> Page Not Found</div>
   )
 }
