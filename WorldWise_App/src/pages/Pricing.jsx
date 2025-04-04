@@ -5,7 +5,7 @@ import styles from "./Product.module.css";
 export default function Pricing() {
   return (
     <main className={styles.product}>
-      <PageNav/>
+      <PageNav />
       <section>
         <div>
           <h2>
