@@ -1,8 +1,8 @@
 import styles from "./CountryList.module.css";
 import React from "react";
 import Spinner from "./Spinner";
-import CityItem from "./CityItem";
 import Message from "./Message";
+import CountryItem from "./CountryItem";
 
 export default function CountryList({ cities, isLoading }) {
   if (isLoading) return <Spinner />;
@@ -10,10 +10,18 @@ export default function CountryList({ cities, isLoading }) {
     return (
       <Message message={"Add your first city by clicking on city on the map"} />
     );
+
+    const countries = cities.reduce((arr, city) => {
+        if (!arr.map((el) => el.country).includes(city.country)) {
+          arr.push({ country: city.country, emoji: city.emoji, id: city.id });
+        }
+        return arr;
+      }, []);
+
   return (
-    <ul className={styles.CountryList}>
-      {cities.map((city) => (
-        <CityItem city={city} key={city.id} />
+    <ul className={styles.countryList}>
+      {countries.map((country) => (
+        <CountryItem country={country} key={countries.id} />
       ))}
     </ul>
   );
