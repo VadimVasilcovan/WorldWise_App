@@ -10,6 +10,7 @@ import AppLayout from "./pages/AppLayout";
 import Pricing from "./pages/Pricing";
 import CityList from "./assets/components/CityList";
 import CountryList from "./assets/components/CountriesList";
+import City from "./assets/components/City";
 
 const BASE_URL = "http://localhost:9000";
 
@@ -50,6 +51,8 @@ export default function App() {
               path="cities"
               element={<CityList cities={cities} isLoading={isLoading} />}
             />
+            {/* Dynamic Routes With URL Parameters */}
+            <Route path="cities/:id" element={<City />} />
             <Route path="countries" element={<CountryList cities={cities} />} />
             <Route path="form" element={<p>Form</p>} />
           </Route>
