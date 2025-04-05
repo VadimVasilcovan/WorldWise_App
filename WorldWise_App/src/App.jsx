@@ -9,8 +9,10 @@ import Pricing from "./pages/Pricing";
 import CityList from "./assets/components/CityList";
 import { useState } from "react";
 import { useEffect } from "react";
+import CountryList from "./assets/components/CountriesList";
 
 const BASE_URL = "http://localhost:9000";
+
 export default function App() {
   const [cities, setCities] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -48,7 +50,7 @@ export default function App() {
               path="cities"
               element={<CityList cities={cities} isLoading={isLoading} />}
             />
-            <Route path="countries" element={<p>Countries</p>} />
+            <Route path="countries" element={<CountryList cities={cities} />} />
             <Route path="form" element={<p>Form</p>} />
           </Route>
           <Route path="*" element={<PageNotFound />} />
