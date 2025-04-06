@@ -11,6 +11,7 @@ import Pricing from "./pages/Pricing";
 import CityList from "./assets/components/CityList";
 import CountryList from "./assets/components/CountriesList";
 import City from "./assets/components/City";
+import Form from "./assets/components/Form";
 
 const BASE_URL = "http://localhost:9000";
 
@@ -54,7 +55,7 @@ export default function App() {
             {/* Dynamic Routes With URL Parameters */}
             <Route path="cities/:id" element={<City />} />
             <Route path="countries" element={<CountryList cities={cities} />} />
-            <Route path="form" element={<p>Form</p>} />
+            <Route path="form" element={<Form/>} />
           </Route>
           <Route path="*" element={<PageNotFound />} />
         </Routes>
