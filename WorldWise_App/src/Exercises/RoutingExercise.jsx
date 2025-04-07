@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+
 import HomePageEx from './pages/HomePageEx';
 import BooksPage from './pages/BooksPage';
 import ListOfBooks from './components/ListOfBooks';
+import BoocksNumber from './components/BoocksNumber';
+import BooksDetails from './components/BooksDetails';
 
 const APITEST = 'https://potterapi-fedeperin.vercel.app/en/books'
 export default function RoutingExercise() {
@@ -22,17 +25,19 @@ export default function RoutingExercise() {
     GetListOfBooks();
     
   },[])
-  console.log(book)
+  
   return (
     <div>
+    
         <BrowserRouter>
         <Routes>
-            <Route path='/' element={<HomePageEx/>}/>
-            <Route path='/app' element={<BooksPage/>}>
-              <Route index element={<Navigate replace to='books' />} />
-              <Route path='books' element={<ListOfBooks/>}/>
-              {/* <Route path='/books:id' element={}/> */}
+            <Route path='/' element={<HomePageEx />}/>
+            <Route path='/app' element={<BooksPage book={book}/>}>
+              <Route path='bookList' element={<ListOfBooks book={book}/>} />
+              <Route path='BooksNumber' element={<BoocksNumber book={book}/>}/>
+              <Route path='bookList/:index' element={<BooksDetails book={book}/>}/>
             </Route>
+            
         </Routes>
         </BrowserRouter>
     </div>
