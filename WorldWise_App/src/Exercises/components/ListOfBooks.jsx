@@ -3,7 +3,7 @@ import BookCardBox from './BookCardBox'
 import { Link } from "react-router-dom";
 
 export default function ListOfBooks({book}) {
-  console.log(book)
+ 
 
 
 

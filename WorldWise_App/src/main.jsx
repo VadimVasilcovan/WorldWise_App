@@ -6,7 +6,7 @@ import RoutingExercise from './Exercises/RoutingExercise.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    {/* <App /> */}
-    <RoutingExercise/>
+    <App />
+    {/* <RoutingExercise/> */}
   </StrictMode>,
 )
