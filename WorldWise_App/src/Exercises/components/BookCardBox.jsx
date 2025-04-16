@@ -1,4 +1,4 @@
-import React from 'react'
+/* import React from 'react'
 
 export default function BookCardBox({ books }) {
   const { title, originalTitle, releaseDate, description, pages, cover } = books
@@ -13,3 +13,4 @@ export default function BookCardBox({ books }) {
     </div>
   )
 }
+ */

@@ -1,4 +1,4 @@
-import React from 'react';
+/* import React from 'react';
 
 export default function BooksNumber({ book }) {
   const numberOfBooks = book.length  // Safely access length, default to 0 if undefined
@@ -7,5 +7,6 @@ export default function BooksNumber({ book }) {
     <div>
       <h1>{numberOfBooks}</h1>
     </div>
-  );
+  )
 }
+A */
